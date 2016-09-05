@@ -106,8 +106,7 @@ pdf.output('group_wise_ranks.pdf')
 
 pdf1=fpdf.FPDF(format='letter')
 pdf1.set_author('PradyumnSinha')
-#di={'COMP_DEPARTMENT':range(1,345),'COE':range(1,148),'Information Technology':range(148,247),'Software Engineering':range(247,345)}
-di={'Electrical Department Ranks':range(538,781),'EE _Ranks':range(538,683),'EEE _Ranks':range(683,781) }
+di={'COMP_DEPARTMENT':range(1,345),'COE':range(1,148),'Information Technology':range(148,247),'Software Engineering':range(247,345),'Electrical Department Ranks':range(538,781),'EE _Ranks':range(538,683),'EEE _Ranks':range(683,781) }
 for group in di:
 	new_page(pdf1,str(group))
 	pdf1.set_font('Arial',size=8)
@@ -125,7 +124,7 @@ for group in di:
 				new_page(pdf1,str(group))
 			cell_print(pdf1,count,i)
 pdf1.close()
-pdf1.output('Electrical Department Combined Ranks.pdf')
+pdf1.output('ranks.pdf')
 
 
 
